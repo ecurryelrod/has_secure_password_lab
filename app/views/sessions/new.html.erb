@@ -1,0 +1,13 @@
+<% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<h1>Login Page</h1>
+
+<%= form_for @user do |f| %>
+    Username: <%= f.text_field :name %>
+    Password: <%= f.password_field :password %>
+    <%= f.submit %>
+    <br><br>
+    <%= link_to "Sign Up", new_user_path %>
+<% end %>
